@@ -15,10 +15,11 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task3.V18.Lib
             if (File.Exists(path)) File.Delete(path);
 
             double res = Math.Round(2.12 * Math.Pow(x, 3) + 1.05 * Math.Pow(x, 2) + 4.1 * x * 2, 3);
-            string output = Convert.ToString(res);
 
-            File.AppendAllText(path, output);
-
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+            {
+                writer.Write(BitConverter.GetBytes(res));
+            }
             return path;
         }
     }
