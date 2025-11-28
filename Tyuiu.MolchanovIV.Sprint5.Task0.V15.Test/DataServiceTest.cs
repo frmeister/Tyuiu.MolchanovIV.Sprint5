@@ -9,7 +9,7 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task0.V15.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string filepath = $@"{Directory.GetCurrentDirectory()}";
+            string filepath = $@"{Path.GetTempPath()}";
             string filename = "OutPutFileTask0.txt";
             string path = Path.Combine(filepath, filename);
 
