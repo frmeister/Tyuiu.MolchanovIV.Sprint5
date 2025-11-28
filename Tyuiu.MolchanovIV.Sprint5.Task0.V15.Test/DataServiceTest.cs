@@ -9,7 +9,9 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task0.V15.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string filepath = $@"{Directory.GetCurrentDirectory()}";
+            string filename = "OutPutFileTask0.txt";
+            string path = Path.Combine(filepath, filename);
 
             FileInfo fileinfo = new FileInfo(path);
             bool fileExists = fileinfo.Exists;

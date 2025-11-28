@@ -6,7 +6,9 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task0.V15.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string filepath = $@"{Directory.GetCurrentDirectory()}";
+            string filename = "OutPutFileTask0.txt";
+            string path = Path.Combine(filepath, filename);
 
             double result = Math.Round((x) / (Math.Pow(x, 3) + 2), 3);
 
