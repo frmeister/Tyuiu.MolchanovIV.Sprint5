@@ -21,7 +21,7 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task1.V8.Lib
 
                 if ((2 * i - 2) == 0)
                 {
-                    output = Convert.ToString(i) + " | " + Convert.ToString(res);
+                    output = Convert.ToString(res);
 
                     if (i != stopValue)
                     {
@@ -36,7 +36,7 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task1.V8.Lib
 
                 res = (4 - 2 * i) + ((2 + Math.Cos(i)) / (2 * i - 2));
                 res = Math.Round(res, 2);
-                output = Convert.ToString(i) + " | " + Convert.ToString(res);
+                output = Convert.ToString(res);
 
                 if (i != stopValue) File.AppendAllText(path, output + Environment.NewLine);
                 else File.AppendAllText(path, output);
