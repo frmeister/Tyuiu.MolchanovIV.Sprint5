@@ -23,8 +23,14 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task2.V10.Lib
                     if (matrix[i, j] > 0) matrix[i, j] = 1;
                     else matrix[i, j] = 0;
 
-                    if (j != columns - 1) File.AppendAllText(path, Convert.ToString(matrix[i, j]));
-                    else File.AppendAllText(path, Convert.ToString(matrix[i, j]) + Environment.NewLine);
+                    string output = Convert.ToString(matrix[i, j]);
+
+                    if (j != columns - 1)
+                    {
+                        output += ";";
+                        File.AppendAllText(path, output);
+                    }
+                    else File.AppendAllText(path, output + Environment.NewLine);
                 }
 
             return path;
