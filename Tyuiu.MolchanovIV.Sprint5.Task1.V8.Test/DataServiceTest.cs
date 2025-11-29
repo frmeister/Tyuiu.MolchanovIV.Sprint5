@@ -6,7 +6,7 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task1.V8.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidExpression()
         {
             string filepath = $@"{Path.GetTempPath()}";
             string filename = "OutPutFileTask1.txt";

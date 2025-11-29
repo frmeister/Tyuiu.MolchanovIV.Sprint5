@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.MolchanovIV.Sprint5Task4.V6.Lib\Tyuiu.MolchanovIV.Sprint5Task4.V6.Lib.csproj" />
+    <ProjectReference Include="..\Tyuiu.MolchanovIV.Sprint5Task4.V6.Lib\Tyuiu.MolchanovIV.Sprint5.Task4.V6.Lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

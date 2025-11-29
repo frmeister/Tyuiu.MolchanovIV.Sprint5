@@ -6,7 +6,7 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task3.V18.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidExpression()
         {
             DataService ds = new DataService();
 
