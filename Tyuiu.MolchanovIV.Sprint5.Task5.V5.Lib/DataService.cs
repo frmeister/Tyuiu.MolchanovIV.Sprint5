@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Globalization;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MolchanovIV.Sprint5.Task5.V5.Lib
 {
@@ -15,11 +16,25 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task5.V5.Lib
 
                 while((line = reader.ReadLine()) != null)
                 {
-                    double currentNum = double.Parse(line);
+                    string curStr = "";
 
-                    if (firstItr) { min = currentNum; max = currentNum; firstItr = false; }
-                    if (currentNum > max) max = currentNum;
-                    if (currentNum < min) min = currentNum;
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i] != ' ')
+                        {
+                            curStr += line[i];
+                        }
+                        else
+                        {
+                            double currentNum = Convert.ToDouble(curStr, CultureInfo.InvariantCulture);
+                            if (firstItr) { min = currentNum; max = currentNum; firstItr = false; }
+                            if (currentNum > max) max = currentNum;
+                            if (currentNum < min) min = currentNum;
+
+                            curStr = "";
+                        }
+                    }
+                    
                 }
             }
 
