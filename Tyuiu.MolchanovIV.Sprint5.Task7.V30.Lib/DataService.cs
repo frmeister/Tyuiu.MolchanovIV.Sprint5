@@ -29,9 +29,9 @@ namespace Tyuiu.MolchanovIV.Sprint5.Task7.V30.Lib
                         }
                         else
                         {
-                            if (curStr.Length == 1) result += "9 ";
+                            if (curStr.Length == 1) result += "9" + line[i];
                             else if (string.IsNullOrEmpty(curStr)) result += line[i];
-                            else result += curStr + " ";
+                            else result += curStr + line[i];
                             curStr = "";
                         }
                     }
